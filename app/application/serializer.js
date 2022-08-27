@@ -1,3 +1,2 @@
-import EmberObject from '@ember/object';
-
-export default class ApplicationSerializer extends EmberObject {}
+import RESTSerializer from '@ember-data/serializer/rest';
+export default class ApplicationSerializer extends RESTSerializer {}

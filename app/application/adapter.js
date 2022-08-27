@@ -1,8 +1,9 @@
-import EmberObject from '@ember/object';
+import RESTAdapter from '@ember-data/adapter/rest';
 
-export default class Adapter extends EmberObject {
-  // findRecord(store, schema, id, snapshot) {
-  //   let { apiVersion } = snapshot.adapterOptions;
-  //   return this.adapterFor(`-api-${apiVersion}`).findRecord(store, schema, id, snapshot);
-  // }
+export default class ApplicationAdapter extends RESTAdapter {
+  host = 'https://db2c-185-78-75-249.ngrok.io';
+
+  get headers() {
+    return { 'owner-secret': 'KvJHWgVgXB' };
+  }
 }
