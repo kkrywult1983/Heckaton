@@ -10,8 +10,14 @@
           <div class='row flex-fill'>
             <div class='col-sm-5'>
               <h4 class='h5'>{{task.description}}</h4>
-              <span class='badge bg-secondary'>{{task.updatedAt}}</span>
-              <span class='badge bg-success'>{{task.createdAt}}</span>
+              <span class='badge bg-secondary'>{{format-date
+                  task.updatedAt
+                  'long'
+                }}</span>
+              <span class='badge bg-success'>{{format-date
+                  task.createdAt
+                  'long'
+                }}</span>
             </div>
             <div class='col-sm-4 py-2'>
               <td>
